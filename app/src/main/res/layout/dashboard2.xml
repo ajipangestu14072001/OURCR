@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/car1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="11dp"
+                android:background="#fff"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Point"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@id/home_mPayBalance"
+                        android:text="RP"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/home_mPayBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="35dp"
+                        android:text="2.000.000"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/img1v"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="7.5dp"
+                        android:layout_marginRight="15dp" />
+
+                    <LinearLayout
+                        android:id="@+id/garis"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/home_mPayBalance"
+                        android:layout_marginTop="10dp"
+                        android:background="#f0efef"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/garis"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/r1"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_weight="0.50"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/panduan"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_baseline_translate_24" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/panduan"
+                                android:gravity="center"
+                                android:text="Translate"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12dp" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/r2"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_weight="0.50"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/berita2"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_outline_qr_code_scanner_24" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/berita2"
+                                android:gravity="center"
+                                android:text="Barcode"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12dp" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/r3"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_weight="0.50"
+                            android:background="?attr/selectableItemBackground"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/keluar2"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_outline_document_scanner_24" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/keluar2"
+                                android:gravity="center"
+                                android:text="OCR"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12dp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

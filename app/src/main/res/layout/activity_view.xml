@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    style="@style/loginParent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/r1"
+        style="@style/parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="12">
+
+            <LinearLayout
+                style="@style/parent"
+                android:layout_weight="3"
+                android:background="@drawable/button"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/parent"
+                    android:background="@drawable/icon"
+                    android:contentDescription="login background" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/headerText"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="OURCR" />
+
+            <include layout="@layout/dashboard" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bg_rounded_line"
+                        android:minHeight="100dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/teksInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@android:color/transparent"
+                            android:hint="OCR Result"
+                            android:scrollbars="vertical"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnedit"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_button"
+                            android:layout_marginRight="15dp"
+                            android:text="Edit"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
+                        <Button
+                            android:id="@+id/btnexport"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_button"
+                            android:text="Export"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
+                        <Button
+                            android:id="@+id/btndel"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_button"
+                            android:text="Delete"
+                            android:layout_marginLeft="15dp"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/car1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="11dp"
+                        android:background="#fff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <com.google.android.material.appbar.AppBarLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tablayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:tabGravity="fill"
+                                app:tabIndicatorColor="@color/colorPrimary"
+                                app:tabIndicatorHeight="3dp"
+                                app:tabMode="fixed"
+                                app:tabSelectedTextColor="@color/colorPrimary"
+                                app:tabTextAppearance="@style/MyTabLayoutTextAppearance" />
+                        </com.google.android.material.appbar.AppBarLayout>
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_marginTop="28dp"
+                            android:paddingBottom="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/linearTranslation"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvListTranslation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp"
+                    android:clipToPadding="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/action1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="12dp">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_outline_chat_24" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_image" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>
